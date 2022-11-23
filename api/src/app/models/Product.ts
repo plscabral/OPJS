@@ -35,4 +35,4 @@ export const Product = model('Product', new Schema({
     required: true,
     ref: 'Category'
   }
-}))
+}));

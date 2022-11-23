@@ -19,11 +19,11 @@ export async function changeOrderStatus(req: Request, res: Response) {
 
     const { status } = changeOrderStatusBody.parse(req.body);
     
-    await Order.findByIdAndUpdate(orderId, { status })
+    await Order.findByIdAndUpdate(orderId, { status });
 
     res.sendStatus(204);
   } catch (err) {
     console.log(err);
-    res.sendStatus(500)
+    res.sendStatus(500);
   }
 }

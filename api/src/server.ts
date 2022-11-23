@@ -9,13 +9,13 @@ mongoose.connect(String(process.env.MONGODB))
     const app = express();
 
     app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
-    
+
     app.use(express.json());
-    
+
     app.use(router);
 
     app.listen(3333, () => {
-      console.log('🚀 Server is running on http://localhost:3333')
+      console.log('🚀 Server is running on http://localhost:3333');
     });
   })
-  .catch(() => console.log('Erro ao conectar no mongodb'))
+  .catch(() => console.log('Erro ao conectar no mongodb'));

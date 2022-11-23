@@ -11,9 +11,9 @@ export async function cancelOrder(req: Request, res: Response) {
 
     const { orderId } = cancelOrderParams.parse(req.params);
 
-    await Order.findByIdAndDelete(orderId)
+    await Order.findByIdAndDelete(orderId);
 
-    res.sendStatus(204)
+    res.sendStatus(204);
   }
   catch (err) {
     console.log(err);

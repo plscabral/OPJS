@@ -1,4 +1,3 @@
-
 // components
 import { FlatList, Modal, } from 'react-native';
 import { Text } from '../Text';
