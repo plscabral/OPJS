@@ -27,6 +27,7 @@ export function TableModal({ visible, onClose, onSave }: TableModalProps) {
   const isInputEmpty = table.length === 0;
 
   function handleSave() {
+    setTable('');
     onSave(table);
     onClose();
   }
